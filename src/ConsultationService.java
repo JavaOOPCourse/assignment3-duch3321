@@ -3,6 +3,10 @@ public class ConsultationService extends Service
 
     // TODO: constructor
 
+    public ConsultationService(String serviceName,int serviceId){
+        super(serviceName,serviceId);
+    }
+
 
     @Override
     public void performService() {
@@ -10,6 +14,10 @@ public class ConsultationService extends Service
         // TODO:
         // check active
         // print consultation message
+        if(getIsActive()){
+            System.out.println("Consultation service active");
+        }
+        else{System.out.println("Consultation service is not active");}
 
     }
 
@@ -18,6 +26,8 @@ public class ConsultationService extends Service
 
         // TODO:
         // print billing message
+
+        System.out.println("Bill amount : 100$");
 
     }
 }
