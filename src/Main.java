@@ -11,6 +11,10 @@ public class Main {
 
         Service[] services = {streaming, cloud, consultation};
 
+        for (Service s:services){
+            System.out.println(s);
+        }
+
         for (Service s : services)
             s.activateService();
 
