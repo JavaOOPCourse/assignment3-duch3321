@@ -3,8 +3,8 @@ public class ConsultationService extends Service
 
     // TODO: constructor
 
-    public ConsultationService(String serviceName,int serviceId){
-        super(serviceName,serviceId);
+    public ConsultationService(String serviceName,int serviceId,double price){
+        super(serviceName,serviceId,price);
     }
 
 
@@ -27,7 +27,7 @@ public class ConsultationService extends Service
         // TODO:
         // print billing message
 
-        System.out.println("Bill amount : 100$");
+        System.out.println("Bill amount : "+getPrice());
 
     }
 }

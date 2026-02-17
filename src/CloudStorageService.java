@@ -6,8 +6,8 @@ public class CloudStorageService extends Service
 
 
     // TODO: constructor
-    public CloudStorageService(String serviceName , int serviceId){
-        super(serviceName,serviceId);
+    public CloudStorageService(String serviceName , int serviceId,double price){
+        super(serviceName,serviceId,price);
         this.premium=false;
     }
 
@@ -46,7 +46,7 @@ public class CloudStorageService extends Service
 
         // TODO:
         // print billing message
-        System.out.println("Bill amount 100$ ");
+        System.out.println("Bill amount : "+getPrice());
 
     }
 }

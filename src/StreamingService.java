@@ -6,8 +6,8 @@ public class StreamingService extends Service
 
 
     // TODO: constructor
-    public StreamingService(String serviceName,int serviceId){
-        super(serviceName,serviceId);
+    public StreamingService(String serviceName,int serviceId,double price){
+        super(serviceName,serviceId,price);
         this.premium=false;
     }
 

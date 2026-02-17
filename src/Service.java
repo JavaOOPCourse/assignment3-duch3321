@@ -7,13 +7,15 @@ public abstract class Service {
     private int serviceId;
     // isActive
     private boolean isActive;
+    private double price;
 
 
     // TODO: constructor
-    public Service(String serviceName,int serviceId){
+    public Service(String serviceName,int serviceId,double price){
         this.serviceName=serviceName;
         this.serviceId=serviceId;
         this.isActive=false;
+        this.price=price;
     }
 
 
@@ -45,13 +47,16 @@ public abstract class Service {
         return (this.isActive);
     }
 
+    public double getPrice(){return (this.price);}
+
 
     // TODO: abstract method performService()
     public abstract void performService();
 
+
     @Override
     public String toString() {
-        return this.serviceName + " (ID: " + this.serviceId + ")";
+        return this.serviceName + " , ID: " + this.serviceId;
     }
 
 

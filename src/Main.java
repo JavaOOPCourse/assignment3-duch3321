@@ -5,15 +5,19 @@ public class Main {
         User admin = new Admin("Alice", 1);
         User customer = new Customer("Bob", 2);
 
-        Service streaming = new StreamingService("StreamPlus", 101);
-        Service cloud = new CloudStorageService("CloudBox", 102);
-        Service consultation = new ConsultationService("MediTalk", 103);
+        Service streaming = new StreamingService("StreamPlus", 101,777);
+        Service cloud = new CloudStorageService("CloudBox", 102,888);
+        Service consultation = new ConsultationService("MediTalk", 103,999);
 
         Service[] services = {streaming, cloud, consultation};
+
+        System.out.println("------ Services ------");
 
         for (Service s:services){
             System.out.println(s);
         }
+
+        System.out.println("------ Activation services ------");
 
         for (Service s : services)
             s.activateService();
